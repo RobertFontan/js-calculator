@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.display{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+} 
+
+input{
+    height: 100px;
+}
+
+.digits-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+}
+
+.digits-container button{
+    height: 100px;
+    width: 100px;
+}
+
+
+.function-container{
+    display: flex;
+    justify-content: center;
+    width: 400px;    
+}
+.function-container button{
+    width: 75px;
+    height: 70px;
+}
+
