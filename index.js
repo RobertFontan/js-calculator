@@ -39,23 +39,25 @@ function operator(op, num1, num2){
         }
         default:{
             console.log(op)
-            alert('Invalid Operator')
+            alert('Invalid')
         }
     }
 }
 
 const digitContainer = document.querySelector('.digits-container')
-const digits = Array.from(digitContainer.querySelectorAll('button'))
+const digits = Array.from(digitContainer.querySelectorAll('.digit'))
 const display = document.querySelector('#number-display')
 
 digits.forEach(digit => digit.addEventListener('click', addToDisplay))
 
 function addToDisplay(e){
+    if(firstNum != undefined){
+        if(firstNum == display.value){
+            display.value = ''
+        }
+    }
     var num = Number(e.target.getAttribute('id'))
     console.log('operation is: ' + operation)
-    if(operation != undefined){
-        display.value = '' // if operation is defined
-    }
     console.log('num value is: ' + num)
     display.value = display.value + num
     console.log('display value: ' + display.value)    
@@ -100,6 +102,14 @@ function doOperation(e){
     catch (error){
         console.error(error)
     }
+    if(finalNum == 'Infinity'){
+        if(secondNum == 0 && operation == '/'){
+            alert('You must be out of your mind')
+        }
+        alert('ERROR')
+        resetCalc()
+    }
+    
     console.log('finalNum is: ' + finalNum)
     display.value = finalNum
     resetCalc()

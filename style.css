@@ -1,17 +1,35 @@
 body{
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .display{
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    
+
 } 
 
 input{
+    text-align: right;
+    color: black;
+    font-size: x-large;
+    width: 290px;
     height: 100px;
+    border-color: black;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.keys{
+    display: flex;
+    flex-direction: row;
 }
 
 .digits-container{
@@ -24,6 +42,8 @@ input{
 .digits-container button{
     height: 100px;
     width: 100px;
+    font-size: 70px;
+    background-color: grey;
 }
 
 
@@ -33,6 +53,12 @@ input{
     width: 400px;    
 }
 .function-container button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: bisque;
+    font-size: 50px;
     width: 75px;
     height: 70px;
 }
